@@ -146,7 +146,6 @@ public class KotlinTokenizer: SwiftTokenizer {
                 .suffix(with: declaration.newToken(.linebreak, "\n"))
             tokens.insert(contentsOf: companionTokens, at:tokens.count - 1) // inserting the companion at the bottom causes a lot less problems with sourceRange of code messing up comment-merging, and maybe good to get it out of the way too.
         }
-
         return tokens
     }
 
